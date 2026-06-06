@@ -2,10 +2,6 @@
 
 > Open-source implementations and educational resources for post-quantum cryptography.
 
-![Project Status](https://img.shields.io/badge/status-active-green)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
-
 ---
 
 ## Mission
