@@ -4,70 +4,66 @@ Polynomial Arithmetic
 Basic polynomial operations used in lattice-based cryptography.
 
 Applications:
+- CRYSTALS-Kyber
+- CRYSTALS-Dilithium
+- NTRU
+"""
 
-* CRYSTALS-Kyber
-* CRYSTALS-Dilithium
-* NTRU
-  """
 
 def poly_add(a, b):
-n = max(len(a), len(b))
-result = [0] * n
+    n = max(len(a), len(b))
+    result = [0] * n
 
-```
-for i in range(n):
-    ai = a[i] if i < len(a) else 0
-    bi = b[i] if i < len(b) else 0
-    result[i] = ai + bi
+    for i in range(n):
+        ai = a[i] if i < len(a) else 0
+        bi = b[i] if i < len(b) else 0
+        result[i] = ai + bi
 
-return result
-```
+    return result
+
 
 def poly_sub(a, b):
-n = max(len(a), len(b))
-result = [0] * n
+    n = max(len(a), len(b))
+    result = [0] * n
 
-```
-for i in range(n):
-    ai = a[i] if i < len(a) else 0
-    bi = b[i] if i < len(b) else 0
-    result[i] = ai - bi
+    for i in range(n):
+        ai = a[i] if i < len(a) else 0
+        bi = b[i] if i < len(b) else 0
+        result[i] = ai - bi
 
-return result
-```
+    return result
+
 
 def poly_mul(a, b):
-result = [0] * (len(a) + len(b) - 1)
+    result = [0] * (len(a) + len(b) - 1)
 
-```
-for i in range(len(a)):
-    for j in range(len(b)):
-        result[i + j] += a[i] * b[j]
+    for i in range(len(a)):
+        for j in range(len(b)):
+            result[i + j] += a[i] * b[j]
 
-return result
-```
+    return result
+
 
 def poly_mod(poly, q):
-return [x % q for x in poly]
+    return [x % q for x in poly]
 
-if **name** == "**main**":
 
-```
-A = [1, 2, 3]
-B = [4, 5]
+if __name__ == "__main__":
 
-print("A =", A)
-print("B =", B)
+    A = [1, 2, 3]
+    B = [4, 5]
 
-print("Addition:")
-print(poly_add(A, B))
+    print("A =", A)
+    print("B =", B)
 
-print("Subtraction:")
-print(poly_sub(A, B))
+    print("Addition:")
+    print(poly_add(A, B))
 
-print("Multiplication:")
-print(poly_mul(A, B))
+    print("Subtraction:")
+    print(poly_sub(A, B))
 
-print("Modulo 7:")
-print(poly_mod(poly_mul(A, B), 7))
-```
+    print("Multiplication:")
+    print(poly_mul(A, B))
+
+    print("Modulo 7:")
+    print(poly_mod(poly_mul(A, B), 7))
