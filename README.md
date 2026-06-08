@@ -244,3 +244,28 @@ Interested in Post-Quantum Cryptography, Secure Systems, and Applied Cryptograph
 ---
 
 *"Building practical understanding of the future of cryptography."*
+
+## Current Progress
+
+Implemented Components
+
+* Modular Arithmetic
+* Extended Euclidean Algorithm
+* Miller-Rabin Primality Test
+* RSA (Educational)
+* Polynomial Arithmetic
+* Number Theoretic Transform (NTT)
+* Polynomial Ring Arithmetic
+* Simplified Kyber Demonstration
+
+Documentation
+
+* Number Theory Notes
+* Post-Quantum Cryptography Overview
+* CRYSTALS-Kyber Study Notes
+* CRYSTALS-Dilithium Study Notes
+* Project Roadmap
+
+Testing
+
+* Modular Arithmetic Unit Tests
